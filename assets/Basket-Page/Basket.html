@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shop</title>
+    <link rel="icon" type="image" href="../img/logo.PNG">
+    <link rel="stylesheet" href="../icon/css/fontello.css">
+    <link rel="stylesheet" href="../swiper/style.css">
+    <link rel="stylesheet" href="../swiper/swiper.css">
+    <link rel="stylesheet" href="assets/css/output.css">
+    <script src="../swiper/swiper.js"></script>
+</head>
+
+<body onload="getbasket()">
+    <main class="w-full relative  font-IranSans cursor-default">
+        <section class="w-full">
+            <div class="w-full h-[36px] hidden lg:flex bg-[#F5F5F5]">
+                <div class=" h-full w-full 2xl:container mx-auto flex">
+                    <figure class="w-[50%] h-full">
+                        <img class="mx-3 lg:mx-8" src="../img/logo.PNG" alt="">
+                    </figure>
+                    <div class="w-[47%] h-full flex justify-end">
+                        <ul class="h-full flex justify-end">
+                            <li class=" h-full flex items-center"><a
+                                    class="h-full px-3 text-[12px] flex items-center justify-center hover:text-[#8a8989] "
+                                    href="">تماس با ما</a><span class="border h-[35%]"></span></li>
+                            <li class=" h-full flex items-center"><a
+                                    class="h-full px-3 text-[12px] flex items-center justify-center hover:text-[#8a8989] "
+                                    href="">درباره ما</a><span class="border h-[35%]"></span></li>
+                            <li class=" h-full flex items-center"><a
+                                    class="h-full px-3 text-[12px] flex items-center justify-center hover:text-[#8a8989] "
+                                    href="">ثبت نام</a><span class="border h-[35%]"></span></li>
+                            <li class=" h-full flex items-center"><a
+                                    class="h-full px-3 text-[12px] flex items-center justify-center hover:text-[#8a8989] "
+                                    href="">ورود</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!------------------------------------- Finish Top Header -------------------------------------->
+            <header class="header_main h-[60px] w-full 2xl:container mx-auto flex bg-[#F5F5F5] lg:bg-[#ffffff]">
+                <figure class=" h-full w-[30%] lg:w-[25%]">
+                    <img class="h-[60px] w-[60px]  mx-3 flex lg:hidden" src="../img/logo.PNG" alt="">
+                </figure>
+                <nav class="hidden lg:flex justify-center h-full w-[50%] overflow-hidden transition-all ">
+                    <ul class="flex justify-center w-[100%]">
+                        <li class=""><a
+                                class="flex items-center justify-center h-full  px-5 border-[#111111] hover:border-b-2 text-[15px]"
+                                href="../../index.html">موبایل</a></li>
+                        <li class=""><a
+                                class="flex items-center justify-center h-full  px-5 border-[#111111] hover:border-b-2 text-[15px]"
+                                href="../../index.html">لپ تاپ</a></li>
+                        <li class=""><a
+                                class="flex items-center justify-center h-full  px-5 border-[#111111] hover:border-b-2 text-[15px]"
+                                href="../../index.html">ساعت</a></li>
+                        <li class=""><a
+                                class="flex items-center justify-center h-full  px-5 border-[#111111] hover:border-b-2 text-[15px]"
+                                href="../../index.html">هدفون</a></li>
+                        <li class=""><a
+                                class="flex items-center justify-center h-full  px-5 border-[#111111] hover:border-b-2 text-[15px]"
+                                href="../../index.html">مکمل دارویی</a></li>
+                    </ul>
+                </nav>
+                <div class="h-full w-[70%]  lg:w-[25%] flex flex-wrap items-center justify-end lg:justify-start ">
+                    <div class="w-[60%] overflow-hidden relative hidden lg:flex">
+                        <input
+                            class="inp_serach hidden outline-none lg:flex w-full h-[36px] bg-header bg-[#F7F7F7] hover:bg-[#E5E5E5] rounded-[100px] pl-[40px] relative"
+                            type="text" placeholder="جستجو...">
+                        <button
+                            class="absolute left-0 bottom-0 h-[36px] w-[37px]  bg-white lg:bg-[#F7F7F7] hover:bg-[#E5E5E5] rounded-[100px]"><i
+                                class="demo-icon icon-search-2 flex items-center justify-center"></i></button>
+                    </div>
+                    <a class="icon_a  hover:bg-[#E5E5E5] w-[37px] h-[36px] rounded-full justify-center items-center ml-2 lg:ml-2 hidden lg:flex"
+                        href=""><i class="demo-icon icon-heart-empty-1 text-[22px] flex items-center"></i></a>
+                    <a class="icon_a  hover:bg-[#E5E5E5] w-[37px] h-[36px] rounded-full justify-center items-center ml-2 lg:ml-2 flex lg:hidden"
+                        href="#"><i class="demo-icon icon-search-2 flex items-center"></i></i></a>
+                        <a class="icon_a relative hover:bg-[#E5E5E5] w-[37px] h-[36px] rounded-full flex justify-center items-center ml-3 lg:ml-2"
+                        href="#">
+                        <i class="demo-icon icon-basket-2 text-[18px] flex items-center justify-center"></i>
+                        <span class="count_basket w-[25px] h-[25px] bg-[#EF4056] absolute top-[-5px] right-[-10px] rounded-full text-[12px] text-white flex justify-center items-center"></span>
+                    </a>
+
+                    <a class="icon_a hover:bg-[#E5E5E5] w-[37px] h-[36px] rounded-full  justify-center items-center ml-3  flex lg:hidden"
+                        href=""><i class="demo-icon icon-torso text-[18px] flex items-center"></i></a>
+                    <a class="icon_a hover:bg-[#E5E5E5] w-[37px] h-[36px] rounded-full  justify-center items-center ml-3 mr-2  flex lg:hidden"
+                        href=""><i class="demo-icon icon-menu-1 text-[18px] flex items-center"></i></a>
+                </div>
+            </header>
+            <!------------------------------------- Finish Header -------------------------------------->
+
+
+        </section>
+        <div class=" w-full 2xl:container mx-auto flex  justify-end items-center bg-[#F5F5F5] py-3">
+
+            <span class="block text-[24px] pr-3">سبد خرید شما</span>
+
+        </div>
+        <section class="w-full 2xl:container mx-auto flex flex-wrap relative ">
+            <div class="show_basket w-full lg:w-[60%] flex flex-wrap justify-evenly px-8">
+            
+            </div>
+            <!------------------------------- Finish Img Product ------------------------------->
+
+
+            <div class="w-full lg:w-[40%]  pt-[50px]">
+                <div class="w-[100%] flex flex-wrap justify-center  sticky top-11 px-[50px]">
+                    <div class="w-full  flex flex-wrap justify-end py-2">
+                        <span>آیا کد تخفیف دارید؟</span>
+                        <div class="w-full flex justify-between p-2">
+                            <input class="w-[60%] h-[45px] text-[15px] pl-2 rounded-[7px] border  outline-none"
+                                type="text">
+                            <button
+                                class="w-[30%] h-[45px] flex justify-center items-center rounded-[45px] text-[17px] border ">تایید</button>
+                        </div>
+                    </div>
+                    <div class="w-full flex flex-wrap justify-between ">
+                        <span class="w-[50%] py-4 text-[15px] border-b-2  border-b-[#e4e4e4]"> - $ </span>
+                        <span class="w-[50%] flex justify-end py-4 text-[15px]  border-b-2  border-b-[#e4e4e4]">هزینه حمل و نقل</span>
+                        <span class="w-[50%] py-4 text-[15px]"> - $</span>
+                        <span class="w-[50%] flex justify-end py-4 text-[15px]">جمع سبد خرید</span>
+                    </div>
+                    <div class="w-full flex flex-wrap py-3 justify-center">
+                        <div
+                            class="w-[80%] h-[50px] rounded-[50px] bg-black text-white flex justify-center items-center  text-[17px] cursor-pointer">
+                            تایید و
+                            تکمیل سفارش
+                        </div>
+                        <p class="flex justify-end text-end py-3 text-[15px]">
+                            هزینه این سفارش هنوز پرداخت نشده‌ و در صورت اتمام موجودی، کالاها از سبد حذف می‌شوند
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!------------------------------------- Finish description product -------------------------------------->
+        </section>
+        <footer class="w-full 2xl:container mx-auto md:flex bg-black text-white">
+            <div class="w-full md:w-[30%] h-full pt-6  px-4  flex flex-wrap justify-center">
+                <div class="w-full  flex flex-wrap justify-between ">
+                    <span class=" w-full flex justify-end text-white text-[15px] lg:text-[20px]">!همراه ما باشید</span>
+                    <i class="demo-icon icon-twitter text-[30px] hover:text-white  text-[#8a8989]"></i>
+                    <i class="demo-icon icon-facebook-official text-[30px] hover:text-white text-[#8a8989]"></i>
+                    <i class="demo-icon icon-youtube text-[30px] hover:text-white  text-[#8a8989]"></i>
+                    <i class="demo-icon icon-whatsapp text-[30px] hover:text-white  text-[#8a8989]"></i>
+                    <i class="demo-icon icon-instagram text-[30px] hover:text-white  text-[#8a8989]"></i>
+                    <span class="w-full flex justify-end text-[11px] md:text-[13px] lg:text-[15px]  pt-3">با ثبت ایمیل،
+                        از جدید‌ترین تخفیف‌ها با‌خبر شوید</span>
+                </div>
+                <div class="relative pt-4">
+                    <input
+                        class="outline-none w-full h-[40px] pl-16 bg-[#F5F5F5] hover:bg-[#E5E5E5] rounded-[100px] text-[#8a8989]"
+                        type="text" placeholder="ایمیل شما">
+                    <button
+                        class="h-[40px] rounded-[100px] absolute left-0 bottom-0 border border-[#bebcbc60]  bg-[#F5F5F5] hover:bg-[#E5E5E5] text-[#8a8989] px-3">ثبت</button>
+                </div>
+                <div class="w-full  pt-10">
+                    <h3 class="flex justify-center text-[15px] lg:text-[20px]">Developed By Hossein Deyri <a
+                            class="ml-4" href="https://github.com/hossein-deyri"><i
+                                class="demo-icon icon-github-circled hover:text-white  text-[#8a8989]"></i></a></h3>
+
+                </div>
+            </div>
+            <div class="w-full md:w-[70%] h-full flex pt-6 pb-6">
+                <nav class="grow">
+                    <ul class="w-full">
+                        <li class="flex justify-end"><span class="text-white text-[15px] lg:text-[20px]">راهنمای
+                                خرید</span></li>
+                        <li class="flex justify-end pt-6"><a
+                                class="hover:text-white  text-[#8a8989] text-right  text-[11px] md:text-[13px] lg:text-[15px]"
+                                href="">نحوه ثبت
+                                سفارش</a></li>
+                        <li class="flex justify-end pt-4"><a
+                                class="hover:text-white  text-[#8a8989] text-right  text-[11px] md:text-[13px] lg:text-[15px]"
+                                href="">رویه
+                                ارسال سفارش</a></li>
+                        <li class="flex justify-end pt-4"><a
+                                class="hover:text-white  text-[#8a8989] text-right  text-[11px] md:text-[13px] lg:text-[15px]"
+                                href="">شیوه های
+                                پرداخت</a></li>
+                    </ul>
+                </nav>
+                <nav class="grow">
+                    <ul class="w-full">
+                        <li class="flex justify-end"><span class="text-white text-[15px] lg:text-[20px]">خدمات
+                                مشتریان</span></li>
+                        <li class="flex justify-end pt-6"><a
+                                class="hover:text-white  text-[#8a8989] text-right  text-[11px] md:text-[13px] lg:text-[15px]"
+                                href="">پاسخ به
+                                پرسش های متداول</a></li>
+                        <li class="flex justify-end pt-4"><a
+                                class="hover:text-white  text-[#8a8989] text-right  text-[11px] md:text-[13px] lg:text-[15px]"
+                                href="">رویه های
+                                بازگرداندن کالا</a></li>
+                        <li class="flex justify-end pt-4"><a
+                                class="hover:text-white  text-[#8a8989] text-right  text-[11px] md:text-[13px] lg:text-[15px]"
+                                href="">شرایط
+                                استفاده</a></li>
+                        <li class="flex justify-end pt-4"><a
+                                class="hover:text-white  text-[#8a8989] text-right  text-[11px] md:text-[13px] lg:text-[15px]"
+                                href="">حریم
+                                خصوصی</a></li>
+                        <li class="flex justify-end pt-4"><a
+                                class="hover:text-white  text-[#8a8989] text-right  text-[11px] md:text-[13px] lg:text-[15px]"
+                                href="">گزارش
+                                باگ</a></li>
+                    </ul>
+                </nav>
+                <nav class="grow">
+                    <ul class="w-full pr-4 lg:pr-10">
+                        <li class="flex justify-end"><span class="text-white text-[15px] lg:text-[20px]">فروشگاه
+                                ما</span></li>
+                        <li class="flex justify-end pt-6"><a
+                                class="hover:text-white  text-[#8a8989] text-right  text-[11px] md:text-[13px] lg:text-[15px]"
+                                href="">اتاق
+                                خبر</a></li>
+                        <li class="flex justify-end pt-4"><a
+                                class="hover:text-white  text-[#8a8989] text-right  text-[11px] md:text-[13px] lg:text-[15px]"
+                                href="">فروش</a>
+                        </li>
+                        <li class="flex justify-end pt-4"><a
+                                class="hover:text-white  text-[#8a8989] text-right  text-[11px] md:text-[13px] lg:text-[15px]"
+                                href="">فرصت های شغلی</a></li>
+                        <li class="flex justify-end pt-4"><a
+                                class="hover:text-white  text-[#8a8989] text-right  text-[11px] md:text-[13px] lg:text-[15px]"
+                                href="">گزارش
+                                تخلف</a></li>
+                        <li class="flex justify-end pt-4"><a
+                                class="hover:text-white  text-[#8a8989] text-right  text-[11px] md:text-[13px] lg:text-[15px]"
+                                href="">تماس با
+                                ما</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </main>
+</body>
+<script src="assets/js/master.js"></script>
+</html>
